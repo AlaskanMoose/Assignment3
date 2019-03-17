@@ -9,7 +9,7 @@ window.onload = function() {
   socket.on("load", function(data) {
     saveFlock = data.data;
     flock = [];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 50; i++) {
       let boi = new Boid();
       boi.position.x = saveFlock[i].position.x;
       boi.position.y = saveFlock[i].position.y;
@@ -51,7 +51,7 @@ function setup() {
   load.style("font-size", "15px");
   load.mousePressed(loadState);
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 50; i++) {
     flock.push(new Boid());
   }
 }
