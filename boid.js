@@ -6,6 +6,16 @@ class Boid {
     this.acceleration = createVector();
     this.maxForce = 1;
     this.maxSpeed = 4;
+
+
+    console.log('this.position');
+    console.log(this.position);
+
+    console.log("this.velocity");
+    console.log(this.velocity);
+
+    console.log("this.acceleration");
+    console.log(this.acceleration);
   }
 
   edges() {
@@ -107,7 +117,7 @@ class Boid {
 
   show() {
     strokeWeight(8);
-    stroke(255);
+    stroke(199);
     point(this.position.x, this.position.y);
   }
 }
