@@ -8,19 +8,19 @@ window.onload = function() {
   socket = io.connect("http://24.16.255.56:8888");
   socket.on("load", function(data) {
     saveFlock = data.data;
-    flock = [];
+    // flock = [];
     for (let i = 0; i < 50; i++) {
-      let boi = new Boid();
-      boi.position.x = saveFlock[i].position.x;
-      boi.position.y = saveFlock[i].position.y;
+      // let boi = new Boid();
+      flock[i].position.x = saveFlock[i].position.x;
+      flock[i].position.y = saveFlock[i].position.y;
 
-      boi.velocity.x = saveFlock[i].velocity.x;
-      boi.velocity.y = saveFlock[i].velocity.y;
+      flock[i].velocity.x = saveFlock[i].velocity.x;
+      flock[i].velocity.y = saveFlock[i].velocity.y;
 
-      boi.acceleration.x = saveFlock[i].acceleration.x;
-      boi.acceleration.y = saveFlock[i].acceleration.y;
+      flock[i].acceleration.x = saveFlock[i].acceleration.x;
+      flock[i].acceleration.y = saveFlock[i].acceleration.y;
 
-      flock.push(boi);
+      // flock.push(boi);
 
     }
     draw();
@@ -72,6 +72,7 @@ function saveState() {
   } else {
     console.log(saveFlock);
 
+    saveFlock = [];
     for (let boid of flock) {
       let position = {x: boid.position.x, y: boid.position.y}
       let velocity = {x: boid.velocity.x, y: boid.velocity.y}

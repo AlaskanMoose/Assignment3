@@ -8,14 +8,14 @@ class Boid {
     this.maxSpeed = 4;
 
 
-    console.log('this.position');
-    console.log(this.position);
+    // console.log('this.position');
+    // console.log(this.position);
 
-    console.log("this.velocity");
-    console.log(this.velocity);
+    // console.log("this.velocity");
+    // console.log(this.velocity);
 
-    console.log("this.acceleration");
-    console.log(this.acceleration);
+    // console.log("this.acceleration");
+    // console.log(this.acceleration);
   }
 
   edges() {
